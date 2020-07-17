@@ -1,6 +1,6 @@
 <?php
 
-namespace CHF\TeaserManager\DataProcessing;
+namespace LST\TeaserManager\DataProcessing;
 
 /***
  *
@@ -9,7 +9,7 @@ namespace CHF\TeaserManager\DataProcessing;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2016 Christian Fries <hello@christian-fries.ch>, CF Webworks
+ *  (c) 2016 Christian Fries <christian.fries@lst.team>
  *
  ***/
 
@@ -59,7 +59,7 @@ class TeaserProcessor implements DataProcessorInterface
         array $processedData
     ) {
         $objectManager = GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
-        $teaserRepository = $objectManager->get('CHF\TeaserManager\Domain\Repository\TeaserRepository');
+        $teaserRepository = $objectManager->get('LST\TeaserManager\Domain\Repository\TeaserRepository');
 
         // Attach teaser data
         $records = $cObj->getRecords('tx_teasermanager_domain_model_teaser', [

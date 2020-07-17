@@ -1,6 +1,6 @@
 <?php
 
-namespace CHF\TeaserManager\Controller;
+namespace LST\TeaserManager\Controller;
 
 /***
  *
@@ -9,16 +9,16 @@ namespace CHF\TeaserManager\Controller;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2016 Christian Fries <hello@christian-fries.ch>, CF Webworks
+ *  (c) 2016 Christian Fries <christian.fries@lst.team>
  *
  ***/
 
-use CHF\BackendModule\Controller\BackendModuleActionController;
-use CHF\BackendModule\Domain\Session\BackendSession;
-use CHF\TeaserManager\Domain\Dto\Filter;
-use CHF\TeaserManager\Domain\Repository\TeaserLayoutRepository;
-use CHF\TeaserManager\Domain\Repository\TeaserRepository;
-use CHF\TeaserManager\Domain\Repository\TeaserTypeRepository;
+use LST\BackendModule\Controller\BackendModuleActionController;
+use LST\BackendModule\Domain\Session\BackendSession;
+use LST\TeaserManager\Domain\Dto\Filter;
+use LST\TeaserManager\Domain\Repository\TeaserLayoutRepository;
+use LST\TeaserManager\Domain\Repository\TeaserRepository;
+use LST\TeaserManager\Domain\Repository\TeaserTypeRepository;
 use TYPO3\CMS\Backend\View\BackendTemplateView;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Imaging\Icon;
@@ -28,22 +28,22 @@ use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 class AdminController extends BackendModuleActionController
 {
     /**
-     * @var \CHF\BackendModule\Domain\Session\BackendSession
+     * @var \LST\BackendModule\Domain\Session\BackendSession
      */
     protected $backendSession = null;
 
     /**
-     * @var \CHF\TeaserManager\Domain\Repository\TeaserLayoutRepository
+     * @var \LST\TeaserManager\Domain\Repository\TeaserLayoutRepository
      */
     protected $teaserLayoutRepository = null;
 
     /**
-     * @var \CHF\TeaserManager\Domain\Repository\TeaserRepository
+     * @var \LST\TeaserManager\Domain\Repository\TeaserRepository
      */
     protected $teaserRepository = null;
 
     /**
-     * @var \CHF\TeaserManager\Domain\Repository\TeaserTypeRepository
+     * @var \LST\TeaserManager\Domain\Repository\TeaserTypeRepository
      */
     protected $teaserTypeRepository = null;
 
@@ -193,7 +193,7 @@ class AdminController extends BackendModuleActionController
     }
 
     /**
-     * @param CHF\TeaserManager\Domain\Dto\Filter $filter
+     * @param LST\TeaserManager\Domain\Dto\Filter $filter
      * @return void
      */
     public function listTeaserAction($filter = null)

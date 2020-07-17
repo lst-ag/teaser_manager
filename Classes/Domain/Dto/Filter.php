@@ -1,6 +1,6 @@
 <?php
 
-namespace CHF\TeaserManager\Domain\Dto;
+namespace LST\TeaserManager\Domain\Dto;
 
 /***
  *
@@ -9,7 +9,7 @@ namespace CHF\TeaserManager\Domain\Dto;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2016 Christian Fries <hello@christian-fries.ch>, CF Webworks
+ *  (c) 2016 Christian Fries <christian.fries@lst.team>
  *
  ***/
 

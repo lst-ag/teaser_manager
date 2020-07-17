@@ -1,6 +1,6 @@
 <?php
 
-namespace CHF\TeaserManager\Domain\Model;
+namespace LST\TeaserManager\Domain\Model;
 
 /***
  *
@@ -9,7 +9,7 @@ namespace CHF\TeaserManager\Domain\Model;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2016 Christian Fries <hello@christian-fries.ch>, CF Webworks
+ *  (c) 2016 Christian Fries <christian.fries@lst.team>
  *
  ***/
 
@@ -96,13 +96,13 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $size = '';
 
     /**
-     * @var \CHF\ColorManager\Domain\Model\Color
+     * @var \LST\ColorManager\Domain\Model\Color
      * @Extbase\ORM\Lazy
      */
     protected $color = null;
 
     /**
-     * @var \CHF\TeaserManager\Domain\Model\TeaserType
+     * @var \LST\TeaserManager\Domain\Model\TeaserType
      * @Extbase\ORM\Lazy
      */
     protected $type = null;
@@ -268,7 +268,7 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @return \CHF\TeaserManager\Domain\Model\TeaserType type
+     * @return \LST\TeaserManager\Domain\Model\TeaserType type
      */
     public function getType()
     {
@@ -276,9 +276,9 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @param \CHF\TeaserManager\Domain\Model\TeaserType $type
+     * @param \LST\TeaserManager\Domain\Model\TeaserType $type
      */
-    public function setType(\CHF\TeaserManager\Domain\Model\TeaserType $type)
+    public function setType(\LST\TeaserManager\Domain\Model\TeaserType $type)
     {
         $this->type = $type;
     }
@@ -380,7 +380,7 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @return \CHF\ColorManager\Domain\Model\Color
+     * @return \LST\ColorManager\Domain\Model\Color
      */
     public function getColor()
     {
@@ -388,7 +388,7 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * @param \CHF\ColorManager\Domain\Model\Color $color
+     * @param \LST\ColorManager\Domain\Model\Color $color
      */
     public function setColor($color)
     {

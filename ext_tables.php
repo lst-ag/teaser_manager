@@ -10,7 +10,7 @@ call_user_func(
         if (TYPO3_MODE === 'BE') {
             if ($settings['showAdministrationModule']) {
                 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
-                    'CHF.TeaserManager',
+                    'LST.TeaserManager',
                     'web', // Make module a submodule of 'web'
                     'admin', // Submodule key
                     '', // Position

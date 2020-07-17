@@ -23,7 +23,7 @@ Install the extension via composer:
 
 .. code-block:: text
 
-   composer require chf/teaser-manager
+   composer require lst/teaser-manager
 
 
 .. _admin-setup:

@@ -1,6 +1,6 @@
 <?php
 
-namespace CHF\TeaserManager\Domain\Repository;
+namespace LST\TeaserManager\Domain\Repository;
 
 /***
  *
@@ -9,7 +9,7 @@ namespace CHF\TeaserManager\Domain\Repository;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2016 Christian Fries <hello@christian-fries.ch>, CF Webworks
+ *  (c) 2016 Christian Fries <christian.fries@lst.team>
  *
  ***/
 
@@ -47,7 +47,7 @@ class TeaserRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 
     /**
      * @param string $mode
-     * @param \CHF\TeaserManager\Domain\Model\TeaserType $type
+     * @param \LST\TeaserManager\Domain\Model\TeaserType $type
      * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
      */
     public function findByType($type, $mode = 'Frontend')

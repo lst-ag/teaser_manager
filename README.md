@@ -4,11 +4,11 @@ This TYPO3 extension provides a backend module to manage teasers in a central pl
 
 ## Installation
 
-Install this extension using composer: `composer require chf/teaser-manager`.
+Install this extension using composer: `composer require lst/teaser-manager`.
 
 ## Dependencies
 
-This extension requires [EXT:backend_module](https://github.com/christian-fries/backend_module).
+This extension requires [EXT:backend_module](https://github.com/lst/backend_module).
 
 ## Supported versions
 

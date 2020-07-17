@@ -14,7 +14,7 @@ tt_content.teasermanager_teaser =< lib.contentElement
 tt_content.teasermanager_teaser {
   templateName = Teasers
   dataProcessing {
-    1 = CHF\TeaserManager\DataProcessing\TeaserProcessor
+    1 = LST\TeaserManager\DataProcessing\TeaserProcessor
     1 {
       dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor

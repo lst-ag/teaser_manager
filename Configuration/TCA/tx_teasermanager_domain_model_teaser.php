@@ -126,7 +126,7 @@ return [
         'subtitle' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.subtitle',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:subtitle',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:subtitle',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -137,7 +137,7 @@ return [
         'link_text' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.link_text',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:link_text',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:link_text',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -148,7 +148,7 @@ return [
         'link' => [
             'exclude' => 0,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.link',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:link',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:link',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -170,7 +170,7 @@ return [
         'text' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.text',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:text',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:text',
             'config' => [
                 'cols' => 40,
                 'enableRichtext' => 1,
@@ -183,7 +183,7 @@ return [
         'date' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.date',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:date',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:date',
             'config' => [
                 'type' => 'input',
                 'size' => 10,
@@ -195,7 +195,7 @@ return [
         'icon' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.icon',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:icon',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:icon',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -206,35 +206,35 @@ return [
         'selected_icon' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.selected_icon',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:selected_icon',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:selected_icon',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
                     ['', '']
                 ],
-                'itemsProcFunc' => 'CHF\TeaserManager\Hook\ItemsProcFunc->icons'
+                'itemsProcFunc' => 'LST\TeaserManager\Hook\ItemsProcFunc->icons'
             ],
 
         ],
         'style' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.style',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:style',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:style',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
                     ['', '']
                 ],
-                'itemsProcFunc' => 'CHF\TeaserManager\Hook\ItemsProcFunc->style'
+                'itemsProcFunc' => 'LST\TeaserManager\Hook\ItemsProcFunc->style'
             ],
 
         ],
         'image' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.image',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:image',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:image',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'image',
                 [
@@ -282,7 +282,7 @@ return [
         'images' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.images',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:images',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:images',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'images',
                 [
@@ -330,12 +330,12 @@ return [
         'size' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.size',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:size',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:size',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [],
-                'itemsProcFunc' => 'CHF\TeaserManager\Hook\ItemsProcFunc->sizes'
+                'itemsProcFunc' => 'LST\TeaserManager\Hook\ItemsProcFunc->sizes'
             ],
 
         ],

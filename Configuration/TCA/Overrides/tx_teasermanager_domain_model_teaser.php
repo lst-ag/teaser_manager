@@ -115,7 +115,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('color_manager'
         'color' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.color',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:color',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:color',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -137,7 +137,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('people')) {
         'person' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.person',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:person',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:person',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -149,7 +149,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('people')) {
         'persons' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.persons',
-            'displayCond' => 'USER:CHF\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:persons',
+            'displayCond' => 'USER:LST\TeaserManager\Matcher\DisplayConditionMatcher->checkTeaserField:persons',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
