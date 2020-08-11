@@ -16,6 +16,7 @@ Version 3.0.0-dev
 
 * [!!!] Change vendor prefix from `CHF` to `LST`
 * Add support for TYPO3 10 and drop support for TYPO3 8
+* Improve select options for person and persons
 
 Version 2.0.2 (2020-01-14)
 ##########################

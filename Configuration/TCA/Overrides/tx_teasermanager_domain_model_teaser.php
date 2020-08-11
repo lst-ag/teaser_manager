@@ -141,6 +141,9 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('people')) {
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
+                'items' => [
+                    ['LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.person.choose', '0']
+                ],
                 'foreign_table' => 'tx_people_domain_model_person',
                 'foreign_table_where' => 'AND tx_people_domain_model_person.sys_language_uid IN (-1,0)',
                 'maxitems' => 1
@@ -153,9 +156,6 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('people')) {
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'items' => [
-                    ['LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.person.choose', '']
-                ],
                 'foreign_table' => 'tx_people_domain_model_person',
                 'foreign_table_where' => 'AND tx_people_domain_model_person.sys_language_uid IN (-1,0)',
                 'MM' => 'tx_teasermanager_teasertype_teaserlayout_mm',
