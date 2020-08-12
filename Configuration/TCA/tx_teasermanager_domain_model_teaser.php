@@ -34,9 +34,9 @@ return [
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
-                'special' => 'languages'
+                'special' => 'languages',
+                'default' => 0,
             ],
-            'default' => 0,
         ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
