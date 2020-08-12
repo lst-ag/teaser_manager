@@ -66,6 +66,9 @@ $GLOBALS['TCA']['tt_content']['palettes']['teaser_type_palette'] = [
 $requestUpdate = $GLOBALS['TCA']['tt_content']['ctrl']['requestUpdate'];
 $GLOBALS['TCA']['tt_content']['ctrl']['requestUpdate'] = !empty($requestUpdate) ? $GLOBALS['TCA']['tt_content']['ctrl']['requestUpdate'] . ',teaser_type' : '';
 
+// Add icon displayed in page module
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['teasermanager_teaser'] = 'content-table';
+
 // Adds the content element to the "Type" dropdown
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
     [
