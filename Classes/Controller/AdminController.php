@@ -68,8 +68,6 @@ class AdminController extends BackendModuleActionController
     }
 
     /**
-     * Set up the doc header properly here
-     *
      * @param ViewInterface $view
      * @return void
      */
@@ -193,7 +191,7 @@ class AdminController extends BackendModuleActionController
     }
 
     /**
-     * @param LST\TeaserManager\Domain\Dto\Filter $filter
+     * @param \LST\TeaserManager\Domain\Dto\Filter $filter
      * @return void
      */
     public function listTeaserAction($filter = null)

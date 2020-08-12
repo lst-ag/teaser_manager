@@ -30,10 +30,7 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($extKey, 'Configuration/TypoScript', 'Teaser Manager');
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_teasermanager_domain_model_teaser', 'EXT:teaser_manager/Resources/Private/Language/locallang_csh_tx_teasermanager_domain_model_teaser.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_teasermanager_domain_model_teaser');
-
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_teasermanager_domain_model_teasertype', 'EXT:teaser_manager/Resources/Private/Language/locallang_csh_tx_teasermanager_domain_model_teasertype.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_teasermanager_domain_model_teasertype');
 
         if (!empty($settings['globalStoragePid'])) {
