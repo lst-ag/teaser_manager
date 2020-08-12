@@ -32,7 +32,7 @@ return [
         'cruser_id' => 'cruser_id',
         'delete' => 'deleted',
         'searchFields' => 'title,',
-        'iconfile' => 'EXT:teaser_manager/Resources/Public/Icons/tx_teasermanager_domain_model_teasertype.gif'
+        'iconfile' => 'EXT:teaser_manager/Resources/Public/Icons/teasertype.svg'
     ],
     'interface' => [
         'showRecordFieldList' => 'title, fields, layouts',

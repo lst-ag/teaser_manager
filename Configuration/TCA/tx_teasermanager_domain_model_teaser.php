@@ -19,7 +19,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'name, title,subtitle,link,text,date,icon,selected_icon,style,image,type,',
-        'iconfile' => 'EXT:teaser_manager/Resources/Public/Icons/tx_teasermanager_domain_model_teaser.gif'
+        'iconfile' => 'EXT:teaser_manager/Resources/Public/Icons/teaser.svg'
     ],
     'interface' => [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, title, subtitle, link, link_text, text, date, icon, selected_icon, style, image, images, size, type',
