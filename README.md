@@ -8,7 +8,7 @@ Install this extension using composer: `composer require lst/teaser-manager`.
 
 ## Dependencies
 
-This extension requires [EXT:backend_module](https://github.com/lst/backend_module).
+This extension requires [EXT:backend_module](https://github.com/lst-ag/backend_module).
 
 ## Supported versions
 

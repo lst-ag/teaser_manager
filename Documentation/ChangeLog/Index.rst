@@ -11,8 +11,8 @@
 ChangeLog
 =========
 
-Version 3.0.0-dev
-#################
+Version 3.0.0 (2020-08-12)
+##########################
 
 * [!!!] Change vendor prefix from `CHF` to `LST`
 * Add support for TYPO3 10 and drop support for TYPO3 8

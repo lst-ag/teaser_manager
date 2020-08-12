@@ -8,10 +8,10 @@ $EM_CONF['teaser_manager'] = [
     'author_email' => 'christian.fries@lst.team',
     'state' => 'stable',
     'clearCacheOnLoad' => 1,
-    'version' => '3.0.0-dev',
+    'version' => '3.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.0-10.4.99',
+            'typo3' => '9.5.17-10.4.99',
             'backend_module' => '2.0.0-2.99.99',
         ],
         'conflicts' => [],
