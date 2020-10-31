@@ -1,6 +1,5 @@
 <?php
-
-namespace LST\TeaserManager\DataProcessing;
+declare(strict_types = 1);
 
 /***
  *
@@ -12,6 +11,8 @@ namespace LST\TeaserManager\DataProcessing;
  *  (c) 2016 Christian Fries <christian.fries@lst.team>
  *
  ***/
+
+namespace LST\TeaserManager\DataProcessing;
 
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

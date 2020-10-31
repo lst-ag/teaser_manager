@@ -11,6 +11,19 @@
 ChangeLog
 =========
 
+Version dev-master
+##################
+
+* Apply coding conventions and style
+
+
+Version 3.0.1 (2020-10-13)
+##########################
+
+* Change default values of tt_content fields
+* Add missing labels in TCA
+* Add missing default value for teaser column `hidden`
+
 Version 3.0.0 (2020-08-12)
 ##########################
 

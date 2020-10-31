@@ -1,4 +1,5 @@
 <?php
+defined('TYPO3_MODE') or die();
 
 return [
     'ctrl' => [
@@ -10,9 +11,6 @@ return [
         'delete' => 'deleted',
         'searchFields' => 'title,',
         'iconfile' => 'EXT:teaser_manager/Resources/Public/Icons/teaserlayout.svg'
-    ],
-    'interface' => [
-        'showRecordFieldList' => 'title',
     ],
     'types' => [
         '1' => ['showitem' => 'title, '],

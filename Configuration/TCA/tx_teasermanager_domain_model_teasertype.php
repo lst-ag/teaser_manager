@@ -1,4 +1,5 @@
 <?php
+defined('TYPO3_MODE') or die();
 
 $fieldItems = [
     ['LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser.title', 'title'],
@@ -33,9 +34,6 @@ return [
         'delete' => 'deleted',
         'searchFields' => 'title,',
         'iconfile' => 'EXT:teaser_manager/Resources/Public/Icons/teasertype.svg'
-    ],
-    'interface' => [
-        'showRecordFieldList' => 'title, fields, layouts',
     ],
     'types' => [
         '1' => ['showitem' => 'title, fields, layouts, '],

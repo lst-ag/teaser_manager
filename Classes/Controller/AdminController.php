@@ -1,6 +1,5 @@
 <?php
-
-namespace LST\TeaserManager\Controller;
+declare(strict_types = 1);
 
 /***
  *
@@ -12,6 +11,8 @@ namespace LST\TeaserManager\Controller;
  *  (c) 2016 Christian Fries <christian.fries@lst.team>
  *
  ***/
+
+namespace LST\TeaserManager\Controller;
 
 use LST\BackendModule\Controller\BackendModuleActionController;
 use LST\BackendModule\Domain\Session\BackendSession;
@@ -28,24 +29,24 @@ use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 class AdminController extends BackendModuleActionController
 {
     /**
-     * @var \LST\BackendModule\Domain\Session\BackendSession
+     * @var BackendSession
      */
-    protected $backendSession = null;
+    protected $backendSession;
 
     /**
-     * @var \LST\TeaserManager\Domain\Repository\TeaserLayoutRepository
+     * @var TeaserLayoutRepository
      */
-    protected $teaserLayoutRepository = null;
+    protected $teaserLayoutRepository;
 
     /**
-     * @var \LST\TeaserManager\Domain\Repository\TeaserRepository
+     * @var TeaserRepository
      */
-    protected $teaserRepository = null;
+    protected $teaserRepository;
 
     /**
-     * @var \LST\TeaserManager\Domain\Repository\TeaserTypeRepository
+     * @var TeaserTypeRepository
      */
-    protected $teaserTypeRepository = null;
+    protected $teaserTypeRepository;
 
     public function injectBackendSession(BackendSession $backendSession)
     {
@@ -90,7 +91,7 @@ class AdminController extends BackendModuleActionController
         $this->extKey = 'teaser_manager';
         $this->moduleName = 'web_TeaserManagerAdmin';
 
-        $this->backendSession->setStorageKey('teaser_manager');
+        $this->backendSession->setStorageKey($this->extKey);
 
         $extConf = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get($this->extKey);
         $this->pageUid = intval($extConf['globalStoragePid']);

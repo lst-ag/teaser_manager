@@ -1,6 +1,5 @@
 <?php
-
-namespace LST\TeaserManager\Matcher;
+declare(strict_types = 1);
 
 /***
  *
@@ -12,6 +11,8 @@ namespace LST\TeaserManager\Matcher;
  *  (c) 2016 Christian Fries <christian.fries@lst.team>
  *
  ***/
+
+namespace LST\TeaserManager\Matcher;
 
 use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
@@ -51,6 +52,10 @@ class DisplayConditionMatcher
             ->execute()
             ->fetch()
         ;
+
+        if (false === $result) {
+            return false;
+        }
 
         $fieldNamesToDisplay = explode(',', $result['fields']);
         if (in_array($fieldName, $fieldNamesToDisplay)) {

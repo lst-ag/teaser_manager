@@ -1,6 +1,5 @@
 <?php
-
-namespace LST\TeaserManager\Domain\Model;
+declare(strict_types = 1);
 
 /***
  *
@@ -13,7 +12,11 @@ namespace LST\TeaserManager\Domain\Model;
  *
  ***/
 
-class TeaserType extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+namespace LST\TeaserManager\Domain\Model;
+
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+
+class TeaserType extends AbstractEntity
 {
     /**
      * @var string

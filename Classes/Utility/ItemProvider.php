@@ -1,6 +1,5 @@
 <?php
-
-namespace LST\TeaserManager\Utility;
+declare(strict_types = 1);
 
 /***
  *
@@ -12,6 +11,8 @@ namespace LST\TeaserManager\Utility;
  *  (c) 2018 Christian Fries <christian.fries@lst.team>
  *
  ***/
+
+namespace LST\TeaserManager\Utility;
 
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\SingletonInterface;

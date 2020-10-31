@@ -1,6 +1,5 @@
 <?php
-
-namespace LST\TeaserManager\Domain\Repository;
+declare(strict_types = 1);
 
 /***
  *
@@ -13,9 +12,13 @@ namespace LST\TeaserManager\Domain\Repository;
  *
  ***/
 
-use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+namespace LST\TeaserManager\Domain\Repository;
 
-class TeaserTypeRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+use TYPO3\CMS\Extbase\Persistence\Repository;
+
+class TeaserTypeRepository extends Repository
 {
     protected $defaultOrderings = [
         'title' => QueryInterface::ORDER_ASCENDING
@@ -28,7 +31,7 @@ class TeaserTypeRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      */
     public function initializeObject()
     {
-        $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+        $querySettings = $this->objectManager->get(Typo3QuerySettings::class);
         $querySettings->setRespectStoragePage(false);
         $this->setDefaultQuerySettings($querySettings);
     }
@@ -42,7 +45,7 @@ class TeaserTypeRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $query = $this->createQuery();
 
         if ($mode == 'Backend') {
-            $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+            $querySettings = $this->objectManager->get(Typo3QuerySettings::class);
             $querySettings->setIgnoreEnableFields(true);
             $querySettings->setRespectStoragePage(false);
             $query->setQuerySettings($querySettings);

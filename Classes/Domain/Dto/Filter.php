@@ -1,6 +1,5 @@
 <?php
-
-namespace LST\TeaserManager\Domain\Dto;
+declare(strict_types = 1);
 
 /***
  *
@@ -12,6 +11,8 @@ namespace LST\TeaserManager\Domain\Dto;
  *  (c) 2016 Christian Fries <christian.fries@lst.team>
  *
  ***/
+
+namespace LST\TeaserManager\Domain\Dto;
 
 class Filter
 {

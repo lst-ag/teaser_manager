@@ -1,6 +1,5 @@
 <?php
-
-namespace LST\TeaserManager\Domain\Model;
+declare(strict_types = 1);
 
 /***
  *
@@ -13,10 +12,13 @@ namespace LST\TeaserManager\Domain\Model;
  *
  ***/
 
+namespace LST\TeaserManager\Domain\Model;
+
 use TYPO3\CMS\Extbase\Annotation as Extbase;
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
-class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Teaser extends AbstractEntity
 {
     /**
      * @var string
@@ -56,7 +58,7 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * @var \DateTime
      */
-    protected $date = null;
+    protected $date;
 
     /**
      * @var string
@@ -72,23 +74,23 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var \LST\People\Domain\Model\Person
      * @Extbase\ORM\Lazy
      */
-    protected $person = null;
+    protected $person;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\LST\People\Domain\Model\Person>
      * @Extbase\ORM\Lazy
      */
-    protected $persons = null;
+    protected $persons;
 
     /**
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      */
-    protected $image = null;
+    protected $image;
 
     /**
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      */
-    protected $images = null;
+    protected $images;
 
     /**
      * @var string
@@ -99,13 +101,13 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var \LST\ColorManager\Domain\Model\Color
      * @Extbase\ORM\Lazy
      */
-    protected $color = null;
+    protected $color;
 
     /**
      * @var \LST\TeaserManager\Domain\Model\TeaserType
      * @Extbase\ORM\Lazy
      */
-    protected $type = null;
+    protected $type;
 
     /**
      * @var string

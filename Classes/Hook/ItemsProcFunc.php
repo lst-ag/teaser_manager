@@ -1,6 +1,5 @@
 <?php
-
-namespace LST\TeaserManager\Hook;
+declare(strict_types = 1);
 
 /***
  *
@@ -12,6 +11,8 @@ namespace LST\TeaserManager\Hook;
  *  (c) 2018 Christian Fries <christian.fries@lst.team>
  *
  ***/
+
+namespace LST\TeaserManager\Hook;
 
 use LST\TeaserManager\Utility\ItemProvider;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

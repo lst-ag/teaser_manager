@@ -1,4 +1,6 @@
 <?php
+defined('TYPO3_MODE') or die();
+
 return [
     'ctrl' => [
         'title'	=> 'LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:teaser',
@@ -20,9 +22,6 @@ return [
         ],
         'searchFields' => 'name, title,subtitle,link,text,date,icon,selected_icon,style,image,type,',
         'iconfile' => 'EXT:teaser_manager/Resources/Public/Icons/teaser.svg'
-    ],
-    'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, title, subtitle, link, link_text, text, date, icon, selected_icon, style, image, images, size, type',
     ],
     'types' => [
         '1' => ['showitem' => 'type, name, title, subtitle, link_text, link, text, date, icon, selected_icon, style, image, images, size, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime'],

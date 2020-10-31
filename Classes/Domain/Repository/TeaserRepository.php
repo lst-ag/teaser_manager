@@ -1,6 +1,5 @@
 <?php
-
-namespace LST\TeaserManager\Domain\Repository;
+declare(strict_types = 1);
 
 /***
  *
@@ -13,7 +12,12 @@ namespace LST\TeaserManager\Domain\Repository;
  *
  ***/
 
-class TeaserRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+namespace LST\TeaserManager\Domain\Repository;
+
+use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
+use TYPO3\CMS\Extbase\Persistence\Repository;
+
+class TeaserRepository extends Repository
 {
     /**
      * Initialize Object with predefined settings
@@ -22,7 +26,7 @@ class TeaserRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      */
     public function initializeObject()
     {
-        $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+        $querySettings = $this->objectManager->get(Typo3QuerySettings::class);
         $querySettings->setRespectStoragePage(false);
         $this->setDefaultQuerySettings($querySettings);
     }
@@ -36,7 +40,7 @@ class TeaserRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $query = $this->createQuery();
 
         if ($mode == 'Backend') {
-            $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+            $querySettings = $this->objectManager->get(Typo3QuerySettings::class);
             $querySettings->setIgnoreEnableFields(true);
             $querySettings->setRespectStoragePage(false);
             $query->setQuerySettings($querySettings);
@@ -55,7 +59,7 @@ class TeaserRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $query = $this->createQuery();
 
         if ($mode == 'Backend') {
-            $querySettings = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Persistence\\Generic\\Typo3QuerySettings');
+            $querySettings = $this->objectManager->get(Typo3QuerySettings::class);
             $querySettings->setIgnoreEnableFields(true);
             $querySettings->setRespectStoragePage(false);
             $query->setQuerySettings($querySettings);
