@@ -14,6 +14,7 @@ ChangeLog
 Version dev-master
 ##################
 
+* Fix default values for tt_content fields
 * Apply coding conventions and style
 
 

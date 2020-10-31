@@ -11,7 +11,7 @@ defined('TYPO3_MODE') or die();
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:tt_content.teaser_type.choose', '']
+                    ['LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:tt_content.teaser_type.choose', 0]
                 ],
                 'foreign_table' => 'tx_teasermanager_domain_model_teasertype',
                 'minitems' => 1,
@@ -28,7 +28,7 @@ defined('TYPO3_MODE') or die();
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:tt_content.teaser_layout.default', '']
+                    ['LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:tt_content.teaser_layout.default', 0]
                 ],
                 'foreign_table' => 'tx_teasermanager_domain_model_teaserlayout',
                 'foreign_table_where' => ' AND tx_teasermanager_domain_model_teaserlayout.uid IN ' .
