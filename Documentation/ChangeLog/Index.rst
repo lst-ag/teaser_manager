@@ -11,8 +11,8 @@
 ChangeLog
 =========
 
-Version dev-master
-##################
+Version 3.0.2 (2020-10-31)
+##########################
 
 * Fix default values for tt_content fields
 * Apply coding conventions and style
