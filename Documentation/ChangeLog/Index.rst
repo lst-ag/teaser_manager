@@ -11,6 +11,11 @@
 ChangeLog
 =========
 
+Version 3.0.3 (2020-11-25)
+##########################
+
+* Show palettes `dimension_settings` and `background_settings` if "lst-fluid-styled-content" is installed
+
 Version 3.0.2 (2020-10-31)
 ##########################
 
