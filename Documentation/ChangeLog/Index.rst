@@ -11,6 +11,19 @@
 ChangeLog
 =========
 
+Version 2.1.0 (2020-11-27)
+##########################
+
+* Add API endpoint for getting all teasers or all teasers from one teaser-type as a JSON string
+    * Add the `?type=1606461885` parameter to the url
+    * Send the correct API secret in the Authorization header of every request. The API secret can be configured in the extension manager.
+    * Use the API with HTTPS only! If you don't, the Authorization secret will be transmitted in plain text.
+
+Version 2.0.2 (2020-01-14)
+##########################
+
+* Add new teaser field style
+
 Version 2.0.1 (2019-12-18)
 ##########################
 
