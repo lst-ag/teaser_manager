@@ -116,6 +116,11 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $style = '';
 
+    /**
+     * @var string
+     */
+    protected $publicImageUrl = '';
+
     public function __construct()
     {
         $this->initializeObjectStorages();
@@ -413,5 +418,23 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setStyle($style)
     {
         $this->style = $style;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPublicImageUrl()
+    {
+        return $this->publicImageUrl;
+    }
+
+    /**
+     * @param string $baseUrl
+     */
+    public function setPublicImageUrl($baseUrl)
+    {
+        if ($this->getImage() !== null) {
+            $this->publicImageUrl = $baseUrl . $this->getImage()->getOriginalResource()->getPublicUrl();
+        }
     }
 }

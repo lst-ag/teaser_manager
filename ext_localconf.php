@@ -11,3 +11,15 @@ if (!defined('TYPO3_MODE')) {
  */
 $cmsLayout = 'cms/layout/class.tx_cms_layout.php';
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS'][$cmsLayout]['tt_content_drawItem']['teaser_manager'] = 'CHF\TeaserManager\Hook\PluginPreview';
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'CHF.TeaserManager',
+    'JsonApi',
+    [
+        'JsonApi' => 'head, get'
+    ],
+    // non-cacheable actions
+    [
+        'JsonApi' => 'head, get'
+    ]
+);

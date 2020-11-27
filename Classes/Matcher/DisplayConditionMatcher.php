@@ -16,7 +16,6 @@ namespace CHF\TeaserManager\Matcher;
 use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * Decide whether or not to display a field based on the selected teaser type

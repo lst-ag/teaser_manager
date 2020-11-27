@@ -29,3 +29,26 @@ tt_content.teasermanager_teaser {
 
 lib.contentElement.templateRootPaths.268 = EXT:teaser_manager/Resources/Private/Templates/
 lib.contentElement.partialRootPaths.268 = EXT:teaser_manager/Resources/Private/Partials/
+
+teasermanager_jsonapi = PAGE
+teasermanager_jsonapi {
+  config {
+    disableAllHeaderCode = 1
+    debug = 0
+    tx_realurl_enable = 1
+    no_cache = 1
+    sys_language_uid = 0
+    language = en
+    additionalHeaders {
+      10 {
+        header = Content-Type: application/json
+        replace = 1
+      }
+    }
+  }
+  typeNum = 1606461885
+
+  meta.robots = noindex,nofollow
+
+  10 < tt_content.list.20.teasermanager_jsonapi
+}

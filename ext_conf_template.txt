@@ -6,3 +6,9 @@ globalStoragePid =
 # cat=backend module/enable/10; type=boolean; label=LLL:EXT:teaser_manager/Resources/Private/Language/locallang_db.xlf:extmng.showAdministrationModule
 showAdministrationModule = 1
 
+# cat=basic/api/10; type=string; label=API secret:The secret to access the API. This secret has to be present in the Authorization header of every request
+apiSecret =
+
+# cat=basic/api/10; type=string; label=BaseURL of this website (to be replaces with Environment in further TYPO3 versions)
+baseUrl =
+
