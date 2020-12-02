@@ -24,7 +24,7 @@ class JsonView extends ExtbaseJsonView
     protected $configuration = [
         'teasers' => [
             '_descendAll' => [
-                '_exclude' => ['pid', 'hidden', 'color', 'icon', 'linkText', 'name', 'person', 'selectedIcon', 'size', 'style', 'image'],
+                '_exclude' => ['pid', 'hidden', 'color', 'icon', 'linkText', 'name', 'person', 'selectedIcon', 'size', 'style', 'image', 'text'],
             ]
         ]
     ];

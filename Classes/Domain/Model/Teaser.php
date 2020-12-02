@@ -325,6 +325,14 @@ class Teaser extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * @return string
+     */
+    public function getPlainText()
+    {
+        return trim(preg_replace('/\s+/', ' ', html_entity_decode(strip_tags($this->getText()))));
+    }
+
+    /**
      * @return \DateTime
      */
     public function getDate()
