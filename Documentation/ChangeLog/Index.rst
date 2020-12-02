@@ -11,6 +11,11 @@
 ChangeLog
 =========
 
+Version 2.1.1 (2020-12-02)
+##########################
+
+* Add possibility to return bodytext without html code inside: `$teaser->getPlainText`
+
 Version 2.1.0 (2020-11-27)
 ##########################
 
