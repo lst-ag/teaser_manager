@@ -56,7 +56,6 @@ defined('TYPO3_MODE') or die();
                 'multiple' => 0,
                 'eval' => 'int',
                 'default' => 0,
-                'enableMultiSelectFilterTextfield' => true
             ],
         ],
     ];

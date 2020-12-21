@@ -75,7 +75,6 @@ return [
                 'autoSizeMax' => 30,
                 'maxitems' => 9999,
                 'multiple' => 0,
-                'enableMultiSelectFilterTextfield' => true,
                 'fieldControl' => [
                     'addRecord' => [
                         'disabled' => false,
