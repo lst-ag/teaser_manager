@@ -11,6 +11,12 @@
 ChangeLog
 =========
 
+Version 3.0.4 (2020-12-21)
+##########################
+
+* Remove deprecated `'transOrigPointerField' => 'l10n_parent'`
+* Remove deprecated `'enableMultiSelectFilterTextfield' => true`
+
 Version 3.0.3 (2020-11-25)
 ##########################
 
