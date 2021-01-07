@@ -114,6 +114,11 @@ class Teaser extends AbstractEntity
      */
     protected $style = '';
 
+    /**
+     * @var string
+     */
+    protected $publicImageUrl = '';
+
     public function __construct()
     {
         $this->initializeObjectStorages();
@@ -309,6 +314,11 @@ class Teaser extends AbstractEntity
         return $this->text;
     }
 
+    public function getPlainText(): string
+    {
+        return trim(preg_replace('/\s+/', ' ', html_entity_decode(strip_tags($this->getText()))));
+    }
+
     /**
      * @param string $text
      */
@@ -411,5 +421,17 @@ class Teaser extends AbstractEntity
     public function setStyle($style)
     {
         $this->style = $style;
+    }
+
+    public function getPublicImageUrl(): ?string
+    {
+        return $this->publicImageUrl;
+    }
+
+    public function setPublicImageUrl(string $baseUrl): void
+    {
+        if ($this->getImage() !== null) {
+            $this->publicImageUrl = $baseUrl . $this->getImage()->getOriginalResource()->getPublicUrl();
+        }
     }
 }

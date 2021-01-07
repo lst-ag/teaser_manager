@@ -4,6 +4,17 @@ defined('TYPO3_MODE') or die();
 (function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:teaser_manager/Configuration/TsConfig/Page/ContentElementWizard.tsconfig">');
 
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'TeaserManager',
+        'JsonApi',
+        [
+            \LST\TeaserManager\Controller\JsonApiController::class =>  'head, get'
+        ],
+        [
+            \LST\TeaserManager\Controller\JsonApiController::class =>  'head, get'
+        ]
+    );
+
     /*
      * Register backend preview
      */
