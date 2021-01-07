@@ -11,6 +11,15 @@
 ChangeLog
 =========
 
+Version 3.1.0 (2021-01-07)
+##########################
+
+* Add API endpoint for getting all teasers or all teasers from one teaser-type as a JSON string
+    * Add the `?type=1606461885` parameter to the url
+    * Send the correct API secret in the Authorization header of every request. The API secret can be configured in the extension manager.
+    * Use the API with HTTPS only! If you don't, the Authorization secret will be transmitted in plain text.
+* Add possibility to return bodytext without html code inside: `$teaser->getPlainText`
+
 Version 3.0.4 (2020-12-21)
 ##########################
 
