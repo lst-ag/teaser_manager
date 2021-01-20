@@ -11,6 +11,10 @@
 ChangeLog
 =========
 
+Version 3.1.1 (2021-01-20)
+##########################
+* Make lazy loaded entities running correctly (see https://forge.typo3.org/issues/90215)
+
 Version 3.1.0 (2021-01-07)
 ##########################
 
