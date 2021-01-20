@@ -16,6 +16,7 @@ namespace LST\TeaserManager\Domain\Model;
 
 use TYPO3\CMS\Extbase\Annotation as Extbase;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 class Teaser extends AbstractEntity
@@ -247,6 +248,9 @@ class Teaser extends AbstractEntity
      */
     public function getPerson()
     {
+        if ($this->person instanceof LazyLoadingProxy) {
+            $this->person->_loadRealInstance();
+        }
         return $this->person;
     }
 
@@ -279,6 +283,9 @@ class Teaser extends AbstractEntity
      */
     public function getType()
     {
+        if ($this->type instanceof LazyLoadingProxy) {
+            $this->type->_loadRealInstance();
+        }
         return $this->type;
     }
 
@@ -396,6 +403,9 @@ class Teaser extends AbstractEntity
      */
     public function getColor()
     {
+        if ($this->color instanceof LazyLoadingProxy) {
+            $this->color->_loadRealInstance();
+        }
         return $this->color;
     }
 
