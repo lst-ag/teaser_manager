@@ -13,6 +13,7 @@ return [
         'versioningWS' => true,
         'languageField' => 'sys_language_uid',
         'transOrigDiffSourceField' => 'l10n_diffsource',
+        'transOrigPointerField' => 'l10n_parent',
         'delete' => 'deleted',
         'enablecolumns' => [
             'disabled' => 'hidden',
