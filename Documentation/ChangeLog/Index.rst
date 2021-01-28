@@ -11,6 +11,10 @@
 ChangeLog
 =========
 
+Version 3.1.3 (2021-01-28)
+##########################
+- Add default value for `teaser-type` in tt_content table
+
 Version 3.1.2 (2021-01-26)
 ##########################
 * Bring back `'transOrigPointerField' => 'l10n_parent'`, needed in TYPO3 10!
