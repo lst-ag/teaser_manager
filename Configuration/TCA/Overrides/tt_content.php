@@ -17,6 +17,7 @@ defined('TYPO3_MODE') or die();
                 'minitems' => 1,
                 'maxitems' => 1,
                 'eval' => 'required,int',
+                'default' => 0,
                 'disableNoMatchingValueElement' => 1,
             ],
         ],
