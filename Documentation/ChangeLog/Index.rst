@@ -11,8 +11,8 @@
 ChangeLog
 =========
 
-dev-master
-##########
+Version 3.1.4 (2021-03-10)
+##########################
 
 * Add extension key to composer configuration
 
