@@ -26,5 +26,10 @@
 		"psr-4": {
 			"LST\\TeaserManager\\": "Classes"
 		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "teaser_manager"
+		}
 	}
 }

@@ -11,16 +11,24 @@
 ChangeLog
 =========
 
+dev-master
+##########
+
+* Add extension key to composer configuration
+
 Version 3.1.3 (2021-01-28)
 ##########################
-- Add default value for `teaser-type` in tt_content table
+
+* Add default value for `teaser-type` in tt_content table
 
 Version 3.1.2 (2021-01-26)
 ##########################
+
 * Bring back `'transOrigPointerField' => 'l10n_parent'`, needed in TYPO3 10!
 
 Version 3.1.1 (2021-01-20)
 ##########################
+
 * Make lazy loaded entities running correctly (see https://forge.typo3.org/issues/90215)
 
 Version 3.1.0 (2021-01-07)
