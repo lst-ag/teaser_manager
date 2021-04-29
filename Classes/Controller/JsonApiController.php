@@ -74,6 +74,7 @@ class JsonApiController extends ActionController
     {
         switch ($this->request->getMethod()) {
             case 'HEAD':
+            case 'OPTIONS':
                 $actionName = 'head';
                 break;
             case 'GET':
