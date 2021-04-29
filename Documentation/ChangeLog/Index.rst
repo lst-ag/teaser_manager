@@ -11,7 +11,7 @@
 ChangeLog
 =========
 
-Version dev-master
+Version 3.1.5 (2021-04-29)
 ##########################
 
 * Return proper status code for OPTIONS request
