@@ -438,10 +438,8 @@ class Teaser extends AbstractEntity
         return $this->publicImageUrl;
     }
 
-    public function setPublicImageUrl(string $baseUrl): void
+    public function setPublicImageUrl(string $absoluteImageUrl): void
     {
-        if ($this->getImage() !== null) {
-            $this->publicImageUrl = $baseUrl . $this->getImage()->getOriginalResource()->getPublicUrl();
-        }
+        $this->publicImageUrl = $absoluteImageUrl;
     }
 }

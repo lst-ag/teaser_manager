@@ -11,6 +11,10 @@
 ChangeLog
 =========
 
+dev-master
+##########
+* Add option to process images used in API calls
+
 Version 3.1.5 (2021-04-29)
 ##########################
 

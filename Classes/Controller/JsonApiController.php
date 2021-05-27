@@ -23,7 +23,7 @@ use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Mvc\Exception\StopActionException;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use TYPO3\CMS\Extbase\Service\ImageService;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\Service\TypoLinkCodecService;
 
@@ -38,6 +38,11 @@ class JsonApiController extends ActionController
      * @var string
      */
     protected $defaultViewObjectName = JsonView::class;
+
+    /**
+     * @var ImageService
+     */
+    protected $imageService;
 
     /**
      * @var TeaserRepository
@@ -59,8 +64,19 @@ class JsonApiController extends ActionController
      */
     protected $baseUrl;
 
-    public function __construct(TeaserRepository $teaserRepository, TeaserTypeRepository $teaserTypeRepository)
+    /**
+     * @var bool
+     */
+    protected $processApiImage = false;
+
+    /**
+     * @var array
+     */
+    protected $apiImageProcessingInstructions = [];
+
+    public function __construct(ImageService $imageService, TeaserRepository $teaserRepository, TeaserTypeRepository $teaserTypeRepository)
     {
+        $this->imageService = $imageService;
         $this->teaserRepository = $teaserRepository;
         $this->teaserTypeRepository = $teaserTypeRepository;
     }
@@ -94,6 +110,21 @@ class JsonApiController extends ActionController
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('teaser_manager');
         $this->apiSecret = (!empty($extensionConfiguration['apiSecret'])) ? $extensionConfiguration['apiSecret'] : 'AfcH5CzAgc27WPyP';
         $this->baseUrl = $extensionConfiguration['baseUrl'];
+
+        if ($extensionConfiguration['processApiImage']) {
+            $processingInstructions = [];
+
+            if (!empty($extensionConfiguration['apiImageWidth'])) {
+                $processingInstructions['width'] = $extensionConfiguration['apiImageWidth'];
+            }
+
+            if (!empty($extensionConfiguration['apiImageHeight'])) {
+                $processingInstructions['height'] = $extensionConfiguration['apiImageHeight'];
+            }
+
+            $this->processApiImage = true;
+            $this->apiImageProcessingInstructions = $processingInstructions;
+        }
     }
 
     /**
@@ -127,7 +158,16 @@ class JsonApiController extends ActionController
                 ])
             );
             if ($teaser->getImage() !== null) {
-                $teaser->setPublicImageUrl($this->baseUrl);
+                $image = $this->imageService->getImage('', $teaser->getImage(), true);
+
+                if ($this->processApiImage) {
+                    $processedImage = $this->imageService->applyProcessingInstructions($image, $this->apiImageProcessingInstructions);
+                    $imageUri = $this->imageService->getImageUri($processedImage, true);
+                } else {
+                    $imageUri = $this->imageService->getImageUri($image, true);
+                }
+
+                $teaser->setPublicImageUrl($imageUri);
             }
         }
         $this->view->assign('teasers', $teasers);
