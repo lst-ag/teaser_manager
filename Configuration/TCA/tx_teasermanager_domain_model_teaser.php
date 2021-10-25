@@ -24,7 +24,7 @@ return [
         'iconfile' => 'EXT:teaser_manager/Resources/Public/Icons/teaser.svg'
     ],
     'types' => [
-        '1' => ['showitem' => 'type, name, title, subtitle, link_text, link, text, date, icon, selected_icon, style, image, images, size, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, sys_language_uid, l10n_parent, l10n_diffsource, hidden, starttime, endtime'],
+        '1' => ['showitem' => 'type, name, title, subtitle, link_text, link, text, date, icon, selected_icon, style, image, images, size, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:sys_language_uid_formlabel, sys_language_uid, l10n_parent, l10n_diffsource, , --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, hidden, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
