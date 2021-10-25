@@ -11,6 +11,11 @@
 ChangeLog
 =========
 
+Version 3.2.1 (2021-10-25)
+##########################
+
+* Move language specific TCA options to own language tab
+
 Version 3.2.0 (2021-05-27)
 ##########################
 
